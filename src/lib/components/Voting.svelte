@@ -45,6 +45,6 @@
     {#if movie?.videolink}
         <video onplay={() => {
             blankScreen = false
-        }} src={movie?.videolink} muted autoplay loop class="absolute top-0 left-0 w-full h-full object-cover z-[-2]"></video>
+        }} src={movie?.videolink} muted autoplay playsinline loop class="absolute top-0 left-0 w-full h-full object-cover z-[-2]"></video>
     {/if}
 </div>
