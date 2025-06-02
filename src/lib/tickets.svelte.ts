@@ -41,6 +41,7 @@ export let updateTicket = async () => {
             method: "POST",
             body: JSON.stringify(tickets)
         })
+        console.log(response)
         const data = await response.json()
         tickets.redticket = data.redticket
         tickets.goldticket = data.goldticket

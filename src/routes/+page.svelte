@@ -5,8 +5,9 @@
     import Voting from "$lib/components/Voting.svelte";
     import { getGoldTicketMovie, getRedTicketMovie, movies, selectedMovie, type Movie } from "$lib/movies.svelte";
     import { Step, step } from "$lib/step.svelte";
-    import { setGoldTicket, setRedTicket } from "$lib/tickets.svelte.js";
+    import { tickets } from "$lib/tickets.svelte.js";
     import { onMount } from "svelte";
+    import { blur, slide } from "svelte/transition";
 
     let { data } = $props();
 
@@ -19,8 +20,9 @@
         if (data.isLoggedIn) {
             const ticketsResponse = await fetch("/tickets");
             const ticketsData = await ticketsResponse.json();
-            setRedTicket(ticketsData.redticket);
-            setGoldTicket(ticketsData.goldticket);
+            console.log(ticketsData)
+            tickets.redticket = ticketsData.redticket;
+            tickets.goldticket = ticketsData.goldticket;
         }
     })
 </script>
