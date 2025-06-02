@@ -27,6 +27,10 @@
     })
 </script>
 
+<svelte:head>
+    <title>Ixtlan Team Movie Club</title>
+</svelte:head>
+
 <div class="absolute top-0 left-0 w-full flex flex-col md:flex-row gap-4 p-4 justify-between z-10 ">
     <div class="flex items-center gap-4">
         <img src="/ixtlan-proto-logo.svg" alt="">

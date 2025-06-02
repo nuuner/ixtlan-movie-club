@@ -4,7 +4,7 @@
     let { data } = $props()
 </script>
 
-<div class="absolute top-0 left-0 w-full h-full flex flex-col justify-center p-4 z-5 bg-black">
+<div class="absolute top-0 left-0 w-full h-full flex flex-col justify-center p-4 z-5 bg-gradient-to-b from-gray-950 to-gray-900">
     <div class="absolute top-0 left-0 w-full h-full flex flex-col justify-center p-4">
         {#if data.isLoggedIn}
         <h1 class="text-2xl font-bold mb-4">Welcome {data.user}</h1>
